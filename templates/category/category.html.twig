@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Blog -
+	{{category.name}}
+{% endblock %}
+
+{% block body %}
+     <ul class='menu'>
+        {% for category in categories %}
+            <li>
+                <a href="/category/{{ category.name }}">{{ category.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+	<h1>{{category.name}}</h1>
+	<ul>
+		{% for post in posts %}
+			<li>
+				<a href="/post/{{ post.slug }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

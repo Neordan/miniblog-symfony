@@ -1,0 +1,23 @@
+h1 {
+    color: purple;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: auto;
+    font-size: larger;
+    text-decoration: none;
+}
+
+.menu li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+

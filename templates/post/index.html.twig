@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon blog - {{post.title}}{% endblock %}
+
+{% block body %}
+    <a href="/categories">Toutes les catégories</a> >
+    <a href="/category/{{category.name}}">{{category.name}}</a> > <a href="/post/{{post.slug}}">{{post.slug}}</a>
+    <h1>{{post.title}}</h1>
+
+    <p>{{post.content}}</p>
+
+    <p>{{ post.createdAt|date("d/m/Y à H:i") }}</p>
+{% endblock %}
